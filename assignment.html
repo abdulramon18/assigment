@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+
+<!-- 
+	 4. Palindrome detector: 
+	Verify if a given string is a palindrome (ie: it reads the same forward and backward eg, "mum",  "level"). 
+	
+	 5. Username Length Validation: 
+	Write a program that ensures a username is between 5 and 15 characters. 
+	
+	
+	 7. Detect File Type from Extension: 
+	Write a program that identifies if a file is a specific type (e.g., ".jpg", ".png") based on its extension, and then outputs the type of file eg: "it is a JPG file" or "it is an MP3 file".
+	
+	
+	 8. Sanitize User phone Input: 
+	Write a program that accepts phone number and country of origin from users.
+	Phone number input must be 11 digits long and start with 0.
+	Remove any leading or trailing spaces from a user input string, add the country code +234 if the user is a Nigerian, +233 if use is Ghanaian or +44 if user is British. Output a string that reads, "As you're Nigerian, your full phone number is +234 809123457", etc.
+
+	 9. Forbidden Words Bot: 
+Write a bot that checks if a user message contains any forbidden word like “bad” or “spam.” and substitute them with nicer synonyms or with "" that is the same length as the bad word.
+
+
+ 10. Scores Grader: 
+Write a program that determines the grade of students in a test. Grade A is for score between 75 and 100, B is for score between 60 and 70, C if for scores between 50 and 60. Scores below 50 are advised to retake exam.
+	 -->
+	<script>
+
+		// 1.
+		let email = prompt("please input your email ").trim()
+		let emailknow = email.endsWith("@gmail.com") || 
+		email.endsWith("@yahoo.com") || email.endsWith("@icloud.com")
+		if(emailknow){
+		    console.log("Email is correct")
+		}else{
+		    console.log("Invalid email address")
+		  }
+
+
+		// 3
+		let url = prompt("Please input your URL").toLowerCase()
+
+		if (url.startsWith("https://")) {
+		console.log("The URL starts with https://")
+		} else if (url.startsWith("http://")) {
+		console.log("The URL starts with http://")
+		} else {
+		console.log("The URL does not start with http:// or https://")
+		}
+
+
+
+
+		// 2
+		
+		let pass = prompt("please input your password").trim()
+		let lower = pass.charAt(0).toLowerCase() === pass.charAt(0)
+		let upper = pass.charAt(pass.length - 1).toUpperCase() === pass.charAt(pass.length - 1)
+		let password = lower && upper && pass.includes(0)
+		if(password){
+			console.log("Strong password")
+		}else{
+			console.log("Weak password")
+		}
+
+
+		// 6.
+		let firstname = prompt("Please input your firstname")
+		if (firstname.length > 0) { 
+			formattedName = firstname.charAt(0).toUpperCase().concat(firstname.slice(1).toLowerCase()) 
+			console.log(formattedName); 
+		} else {
+			console.log("Please input corret firstname."); 
+		}
+
+		
+
+
+	</script>
+</body>
+</html>
